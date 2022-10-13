@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/apple-tweet/static/css/main.7276957d.css",
+    "main.js": "/apple-tweet/static/js/main.2045f0b9.js",
+    "index.html": "/apple-tweet/index.html",
+    "main.7276957d.css.map": "/apple-tweet/static/css/main.7276957d.css.map",
+    "main.2045f0b9.js.map": "/apple-tweet/static/js/main.2045f0b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7276957d.css",
+    "static/js/main.2045f0b9.js"
+  ]
+}

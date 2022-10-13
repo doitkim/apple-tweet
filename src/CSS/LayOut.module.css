@@ -1,0 +1,117 @@
+.DefaultLayOut {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  width: 30vw;
+  padding: 25px;
+  font-size: 12px;
+}
+
+.InputLayOut,
+.LogInBtnLayOut {
+  display: flex;
+  padding: 10px;
+  border: 0.2px solid gray;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.LogInBtnLayOut {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.LogInBtnLayOut:hover {
+  background-color: skyblue;
+  color: black;
+  transition-duration: 2s;
+  font-weight: bold;
+}
+
+.JoinLinkText {
+  text-decoration: none;
+  color: blue;
+}
+
+.JoinText {
+  margin-top: 30px;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.FindPassword {
+  border: 0.2px solid gray;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.FindPassword:hover {
+  background-color: skyblue;
+  color: white;
+  font-weight: bold;
+  transition-duration: 2s;
+}
+
+.SNSLogInBtnLayOut {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 0.2px solid gray;
+  padding: 10px;
+  border-radius: 20px;
+  width: 30vw;
+  font-weight: bold;
+}
+
+.SNSLogInBtnLayOut:hover {
+  background-color: skyblue;
+  color: white;
+  transition-duration: 2s;
+  font-weight: bold;
+}
+
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.LogoImg {
+  width: 25px;
+}
+
+.formLayout {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30vw;
+  font-size: 12px;
+}
+
+.twitterLogoLayout {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30vw;
+  font-size: 12px;
+}

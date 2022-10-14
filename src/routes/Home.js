@@ -12,6 +12,8 @@ import { useEffect, useState } from "react";
 // 트위터 게시글 작성 또는 보여줄 때 (이미지 및 텍스트 추가, 게시글 ID 및 작성일자 정보 있음)
 import NweetFactory from "components/NweetFactory";
 
+import styles from "../CSS/LayOut.module.css";
+
 // 유저 정보 받음
 const Home = ({ userObj }) => {
   const [nweets, setNweets] = useState([]); // 데이터 타입은 배열 명시
@@ -37,10 +39,10 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.twitterBoard}>
       {/* 유저 정보 게시글 작성 / 읽기 역활인 컴포넌트에 전달 (CR기능) */}
       <NweetFactory userObj={userObj} />
-      <div>
+      <div className={styles.BorderLayOut}>
         {/* 배열인 변수라서 map을 써서 풀어서 그 안에 사용하고자 하는 내용들 빼내서 Nweet 컴포넌트에 저장 */}
         {nweets.map((nweet) => (
           <>

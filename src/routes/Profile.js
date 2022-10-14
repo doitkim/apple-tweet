@@ -9,6 +9,7 @@ import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 // onSnapshot : 사용자가 컬렉션 안에 있는 내용들을 작성하면 실시간으로 반영 해주는 기능
 // query : sql 쿼리와 같이 여기서 이걸 해주세요라고 명령 해주는 기능
 // orderBy : sql 쿼리와 같고 (desc, asc) 옵션이 있음
+import styles from "../CSS/LayOut.module.css";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({ refreshUser, userObj }) => {
@@ -65,20 +66,23 @@ export default ({ refreshUser, userObj }) => {
   }, []);
 
   return (
-    <>
-      <form onSubmit={onSubmit}>
+    <div className={styles.twitterBoard}>
+      <form onSubmit={onSubmit} className={styles.twitCreateForm}>
         <input
           onChange={onChange}
           type="text"
           placeholder="Display name"
           value={newDisplayName}
+          style={{ width: "58vh", padding: 4 }}
         />
         <input type="submit" value="Update Profile" />
         <button onClick={onLogOutClick}>
-          <Link to="/">Log Out</Link>
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            Log Out
+          </Link>
         </button>
       </form>
-      <div>
+      <div className={styles.BorderLayOut}>
         {/* 배열인 변수라서 map을 써서 풀어서 그 안에 사용하고자 하는 내용들 빼내서 Nweet 컴포넌트에 저장 */}
         {nweets.map((nweet) => (
           <>
@@ -96,6 +100,6 @@ export default ({ refreshUser, userObj }) => {
           </>
         ))}
       </div>
-    </>
+    </div>
   );
 };

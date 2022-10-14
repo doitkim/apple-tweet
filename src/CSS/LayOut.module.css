@@ -82,30 +82,19 @@
   font-weight: bold;
 }
 
-.logoWrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+/* 트위터 로고 이미지 스타일 적용*/
+.mainTwitLogo {
+  width: 15vh;
 }
 
+/* 구글 로고 이미지 스타일 적용*/
 .LogoImg {
   width: 25px;
 }
 
-.formLayout {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30vw;
-  font-size: 12px;
-}
-
+/* 트위터 로고 스타일 적용 */
 .twitterLogoLayout {
-  margin-top: 20vh;
+  margin-top: 15vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -114,4 +103,115 @@
   margin-right: auto;
   width: 30vw;
   font-size: 12px;
+}
+
+/* 게시글 수정 삭제 버튼 적용 */
+.twitButton {
+  border: 0;
+  border-radius: 100px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: pink;
+  color: white;
+  font-weight: bold;
+}
+
+/* 게시글 내용 스타일 적용 */
+
+.twitContent {
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  margin-bottom: 20px;
+}
+
+/*게시글 작성자 스타일 적용*/
+
+.twitCreator {
+  background-color: pink;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* 게시글 레이아웃 스타일 적용 */
+.twitForm {
+  margin-top: 4vh;
+  width: 60vw;
+}
+
+/* 트윗 작성 폼 스타일 적용 */
+.twitCreateForm {
+  display: flex;
+  margin-top: 20px;
+  background-color: hotpink;
+  padding: 20px;
+  width: 57vw;
+  justify-content: space-between;
+}
+
+/* 네비게이션(홈, 프로필) 메뉴바 스타일 적용*/
+
+.navigation {
+  display: flex;
+  margin-top: 40px;
+  background-color: skyblue;
+  color: white;
+  font-weight: bold;
+  width: 58.5vw;
+  height: 4vh;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+/* 네비게이션 링크 스타일 적용 */
+.navigaionLink {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* 트윗 보더 (게시글, 작성 공간) 레이아웃 스타일 적용 */
+
+.twitterBoard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80vh;
+}
+
+/* 트윗 보더를 감싸서 스크롤 내리기 위한 레이아웃 스타일 적용 */
+
+.BorderLayOut {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  height: 600px;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.BorderLayOut::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.ResetPassword {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

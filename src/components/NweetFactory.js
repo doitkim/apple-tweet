@@ -7,6 +7,7 @@ import { addDoc, collection } from "firebase/firestore";
 // 컬렉션 : sql의 테이블이라 생각하면 됨
 // 컬렉션에 게시글을 추가 할려고 할때 사용
 
+import styles from "../CSS/LayOut.module.css";
 const NweetFactory = ({ userObj }) => {
   // 유저 정보를 받음
   const [nweet, setNweet] = useState("");
@@ -70,16 +71,17 @@ const NweetFactory = ({ userObj }) => {
   const onClearAttachment = () => setAttachment(null);
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={styles.twitCreateForm}>
       <input
         value={nweet}
         onChange={onChange}
         type="text"
         placeholder="오늘은 머하고 놀았음?"
         maxLength={400}
+        style={{ width: "40vh" }}
       />
       <input type="file" accept="image/*" onChange={onFileChange} />
-      <input type="submit" value="Nweet" />
+      <input type="submit" value="등록" />
       {/* 이미지가 있으면 해당 태그가 생성되서 이미지가 보이게 됨 */}
       {attachment && (
         <div>

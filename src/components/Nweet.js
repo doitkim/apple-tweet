@@ -3,6 +3,7 @@ import { useState } from "react"; // 17버전 이후부터는 최상위에 명�
 import { dbService, storageService } from "fbase"; // 파이어스토어 (게시글)와 스토리지서비스 (이미지)
 import { doc, deleteDoc, updateDoc } from "firebase/firestore"; // 파이어스토어에 컬럼(게시글)을 조작 (수정 삭제)
 import { deleteObject, ref } from "firebase/storage"; // 이미지의 url을 저장하고 삭제하는 용도
+import styles from "../CSS/LayOut.module.css";
 
 // 게시글 정보와 소유자인지 아닌지에 대한 정보 받음
 const Nweet = ({ nweetObj, isOwner }) => {
@@ -47,7 +48,7 @@ const Nweet = ({ nweetObj, isOwner }) => {
   return (
     <div key={nweetObj.id}>
       {/* 오브젝트로 값을 전달받았기에 리스트형식으로 타입이 변경되어 키를 넣어야함 */}
-      <div>
+      <>
         {editing ? (
           <>
             <form onSubmit={onSubmit}>
@@ -64,20 +65,20 @@ const Nweet = ({ nweetObj, isOwner }) => {
           </>
         ) : (
           // 수정을 취소하거나 또는 수정이 완료가 되면 보여지는 내용
-          <div style={{ margin: 5 }}>
+          <div className={styles.twitForm}>
             {/* 게시글 작성자 이름 */}
-            <div>🥕 {nweetObj.createName}</div>
+            <div className={styles.twitCreator}>🐦 {nweetObj.createName}</div>
             {/* 게시글 등록 시 이미지 업로드 여부에 따른 게시글 표기 달라짐 */}
             {nweetObj.attachmentUrl !== "" ? (
               // 이미지가 있으면 이미지 태그가 같이 나감
               <>
-                <hr />
-                <img src={nweetObj.attachmentUrl} width="300" height="300" />
-                <hr />
-                <div>{nweetObj.text}</div>
+                <div className={styles.twitContent}>
+                  <img src={nweetObj.attachmentUrl} width="300" height="300" />
+                  {nweetObj.text}
+                </div>
               </>
             ) : (
-              <div>{nweetObj.text}</div>
+              <div className={styles.twitContent}>{nweetObj.text}</div>
             )}
           </div>
         )}
@@ -85,11 +86,15 @@ const Nweet = ({ nweetObj, isOwner }) => {
         {/* 작성자가 맞다면 수정 / 삭제 버튼이 생기고 없으면 안생김 */}
         {isOwner && (
           <>
-            <button onClick={toggleEditing}>수정</button>
-            <button onClick={onDeleteClick}>삭제</button>
+            <button className={styles.twitButton} onClick={toggleEditing}>
+              수정
+            </button>
+            <button className={styles.twitButton} onClick={onDeleteClick}>
+              삭제
+            </button>
           </>
         )}
-      </div>
+      </>
     </div>
   );
 };

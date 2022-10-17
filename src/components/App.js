@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div>
-      {/* 로그인 상태라면 init이 True 로그아웃 상태라면 false [setInit과 useState(기본값 확인)] */}
+      {/* 로그인 상태라면 init이 True 로그아웃 상태라면 false [setInit과 useState(기본값 확인)] => 파이어베이스 연동 여부로 로그인 페이지 활성 비활성화됨 (수정)*/}
       {init ? (
         // AppRouter에서 중복이 발생하는 인증을 피하기위해 props로 인증 상태 및 정보 전달
         <AppRouter

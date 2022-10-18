@@ -75,9 +75,34 @@ export default ({ refreshUser, userObj }) => {
           value={newDisplayName}
           style={{ width: "58vh", padding: 4 }}
         />
-        <input type="submit" value="Update Profile" />
-        <button onClick={onLogOutClick}>
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+        <input
+          type="submit"
+          value="프로필 업데이트"
+          style={{
+            backgroundColor: "skyblue",
+            border: "0",
+            padding: 8,
+
+            color: "white",
+            fontWeight: "bold",
+          }}
+        />
+        <button
+          onClick={onLogOutClick}
+          style={{
+            backgroundColor: "skyblue",
+            border: "0",
+            padding: 8,
+          }}
+        >
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "bold",
+            }}
+          >
             Log Out
           </Link>
         </button>

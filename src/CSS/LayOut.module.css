@@ -111,7 +111,7 @@
   border-radius: 100px;
   margin-left: 2px;
   margin-right: 2px;
-  background-color: pink;
+  background-color: skyblue;
   color: white;
   font-weight: bold;
 }
@@ -128,7 +128,7 @@
 /*게시글 작성자 스타일 적용*/
 
 .twitCreator {
-  background-color: pink;
+  background-color: skyblue;
   color: white;
   font-weight: bold;
   margin-bottom: 20px;
@@ -145,10 +145,12 @@
 .twitCreateForm {
   display: flex;
   margin-top: 20px;
-  background-color: hotpink;
-  padding: 20px;
+  padding: 10px;
   width: 57vw;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: stretch;
 }
 
 /* 네비게이션(홈, 프로필) 메뉴바 스타일 적용*/
@@ -159,7 +161,7 @@
   background-color: skyblue;
   color: white;
   font-weight: bold;
-  width: 58.5vw;
+  width: 56vw;
   height: 4vh;
   flex-direction: row;
   align-content: center;
@@ -190,16 +192,15 @@
   align-content: center;
   flex-wrap: wrap;
   align-items: center;
-  width: 80vh;
 }
 
 /* 트윗 보더를 감싸서 스크롤 내리기 위한 레이아웃 스타일 적용 */
 
 .BorderLayOut {
-  margin-top: 60px;
   margin-bottom: 60px;
   height: 600px;
   overflow-y: auto;
+  width: 57vw;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -214,4 +215,27 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+/*트윗 등록 / 로그아웃 / 프로필 업데이트 버튼 */
+
+.enrollBtnBlank,
+.logoutBTN,
+.profileUpdate {
+  background-color: #8ecdf8;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 87px;
+  height: 36px;
+  border: 0;
+}
+.enrollBtnNotBlank {
+  background-color: #1d9bf0;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 87px;
+  height: 36px;
+  border: 0;
 }

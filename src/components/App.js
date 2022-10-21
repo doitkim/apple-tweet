@@ -13,6 +13,7 @@ function App() {
           displayName: user.displayName,
           uid: user.uid,
           updateProfile: (args) => user.updateProfile(args),
+          userPhoto: user.photoURL, // 프로필 사진
         });
       } else {
         // 로그아웃등과 같이 props의 값이 없다면 초기화
@@ -31,6 +32,7 @@ function App() {
       displayName: user.displayName,
       uid: user.uid,
       updateProfile: (args) => user.updateProfile(args),
+      userPhoto: user.photoURL, // 프로필 사진
     });
   };
 

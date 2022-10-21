@@ -120,6 +120,7 @@ export default ({ refreshUser, userObj }) => {
                 nweetObj={nweet}
                 // 작성자가 맞는지 확인하기 위해 사용
                 isOwner={nweet.creatorId === userObj.uid}
+                userObj={userObj}
               />
             ) : null}
           </>

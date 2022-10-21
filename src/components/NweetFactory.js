@@ -40,6 +40,8 @@ const NweetFactory = ({ userObj }) => {
           createName:
             userObj.displayName !== null ? userObj.displayName : userObj.email,
           // 닉네임이 있으면 사용하고 없으면 이메일을 사용하라
+          createPhoto: userObj.userPhoto !== null ? userObj.userPhoto : null,
+          // 사용자 프로필 사진이 있으면 사용하고 없으면 널 값 줌
           attachmentUrl, // 키와 값의 변수가 동일하다면 하나만 써도 됨
         });
       } catch (error) {

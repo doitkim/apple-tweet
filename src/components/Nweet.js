@@ -67,7 +67,18 @@ const Nweet = ({ nweetObj, isOwner }) => {
           // 수정을 취소하거나 또는 수정이 완료가 되면 보여지는 내용
           <div className={styles.twitForm}>
             {/* 게시글 작성자 이름 */}
-            <div className={styles.twitCreator}>🐦 {nweetObj.createName}</div>
+            {nweetObj.createPhoto !== null ? (
+              <>
+                <div className={styles.twitCreator}>
+                  <img src={nweetObj.createPhoto} width={25} height={25} />
+                  &nbsp;&nbsp;
+                  {nweetObj.createName}
+                </div>
+              </>
+            ) : (
+              <div className={styles.twitCreator}>🐦 {nweetObj.createName}</div>
+            )}
+
             {/* 게시글 등록 시 이미지 업로드 여부에 따른 게시글 표기 달라짐 */}
             {nweetObj.attachmentUrl !== "" ? (
               // 이미지가 있으면 이미지 태그가 같이 나감

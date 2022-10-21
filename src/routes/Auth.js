@@ -15,9 +15,7 @@ const Auth = () => {
       provider = new firebaseInstance.auth.GoogleAuthProvider();
       // 구글 로그인 시도일 경우 파이어베이스의 인증기능에 구글 제공업체 함수 클래스 생성
     }
-    const data = await authService.signInWithPopup(provider);
-    // 구글 팝업창으로 로그인 실행
-    // console.log(data);
+    await authService.signInWithPopup(provider);
   };
   return (
     <div>

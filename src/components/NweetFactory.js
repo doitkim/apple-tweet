@@ -31,11 +31,48 @@ const NweetFactory = ({ userObj }) => {
       }
       // 공백 입력 불가 조건
       try {
+        // 시간 설정
+        const date = new Date();
+        const Year = date.getFullYear();
+        const Month = String(date.getMonth() + 1).padStart(2, "0");
+        let day = date.getDay();
+        const dates = String(date.getDate()).padStart(2, "0");
+        const hour = String(date.getHours()).padStart(2, "0");
+        const minute = String(date.getMinutes()).padStart(2, "0");
+        const second = String(date.getSeconds()).padStart(2, "0"); // 문자열로 변환 후 앞에 0 넣어줌
+
+        // eslint-disable-next-line default-case
+        switch (
+          String(day) // 요일 확인해서 출력
+        ) {
+          case "0":
+            day = "일";
+            break;
+          case "1":
+            day = "월";
+            break;
+          case "2":
+            day = "화";
+            break;
+          case "3":
+            day = "수";
+            break;
+          case "4":
+            day = "목";
+            break;
+          case "5":
+            day = "금";
+            break;
+          case "6":
+            day = "토";
+            break;
+        }
+
         await addDoc(collection(dbService, "nweets"), {
           // 컬렉션(테이블이라고 생각하셈)
           // 파이어베이스에 "nweets" 테이블에다가 추가할 거임
           text: nweet, // 작성한 트윗의 텍스트 정보
-          createdAt: Date.now(), // 작성된 일자 (컴퓨터의 시간을 씀)
+          createdAt: `${Year}년 ${Month}월 ${dates}일 (${day}) ${hour}:${minute}:${second}`, // 작성된 일자 (컴퓨터의 시간을 씀)
           creatorId: userObj.uid, // 작성자 고유 ID (이메일 아님 고유 부여 번호가 있음)
           createName:
             userObj.displayName !== null ? userObj.displayName : userObj.email,

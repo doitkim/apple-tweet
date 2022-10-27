@@ -82,7 +82,6 @@ export default ({ refreshUser, userObj }) => {
             backgroundColor: "skyblue",
             border: "0",
             padding: 8,
-
             color: "white",
             fontWeight: "bold",
           }}

@@ -37,7 +37,6 @@ const Home = ({ userObj }) => {
       setNweets(nweetArr); // 배열 변수에 정보 넣기
     });
   }, []);
-
   return (
     <div className={styles.twitterBoard}>
       {/* 유저 정보 게시글 작성 / 읽기 역활인 컴포넌트에 전달 (CR기능) */}

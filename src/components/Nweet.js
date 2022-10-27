@@ -35,7 +35,6 @@ const Nweet = ({ nweetObj, isOwner }) => {
     });
     setEditing(false);
   };
-
   const onChange = (e) => {
     const {
       target: { value },
@@ -72,11 +71,15 @@ const Nweet = ({ nweetObj, isOwner }) => {
                 <div className={styles.twitCreator}>
                   <img src={nweetObj.createPhoto} width={25} height={25} />
                   &nbsp;&nbsp;
+                  {nweetObj.createdAt}&nbsp;&nbsp;
                   {nweetObj.createName}
                 </div>
               </>
             ) : (
-              <div className={styles.twitCreator}>🐦 {nweetObj.createName}</div>
+              <div className={styles.twitCreator}>
+                🐦 {nweetObj.createdAt}&nbsp;&nbsp;
+                {nweetObj.createName}
+              </div>
             )}
 
             {/* 게시글 등록 시 이미지 업로드 여부에 따른 게시글 표기 달라짐 */}

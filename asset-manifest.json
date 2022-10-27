@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/apple-tweet/static/css/main.59fc0bd2.css",
-    "main.js": "/apple-tweet/static/js/main.709d3faf.js",
+    "main.js": "/apple-tweet/static/js/main.d1d49363.js",
     "index.html": "/apple-tweet/index.html",
     "main.59fc0bd2.css.map": "/apple-tweet/static/css/main.59fc0bd2.css.map",
-    "main.709d3faf.js.map": "/apple-tweet/static/js/main.709d3faf.js.map"
+    "main.d1d49363.js.map": "/apple-tweet/static/js/main.d1d49363.js.map"
   },
   "entrypoints": [
     "static/css/main.59fc0bd2.css",
-    "static/js/main.709d3faf.js"
+    "static/js/main.d1d49363.js"
   ]
 }
